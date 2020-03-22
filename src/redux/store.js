@@ -28,7 +28,7 @@ const reducer = (state = init, action) => {
   if (action.type === 'LOGOUT') {
     Cookies.remove('user');
     Cookies.remove('auth');
-    return init;
+    return {state:init};
   }
   return state;
 }
